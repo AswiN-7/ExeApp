@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise"
+        android:id="@+id/tv_info"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:textSize="40sp"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_info"
+        android:padding="50dp"
+        android:id="@+id/sv_main"
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+
+        <ImageView
+            android:id="@+id/iv_cat_n_cow"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/cat_n_cow"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cat n Cow"
+            android:id="@+id/btn_cat_n_cow"
+            />
+        <ImageView
+            android:id="@+id/iv_bridge"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/bridge"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bridge"
+            android:id="@+id/btn_bridge"
+            />
+        <ImageView
+            android:id="@+id/iv_meditate"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/meditation"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="meditate"
+            android:id="@+id/btn_meditate"
+            />
+    </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

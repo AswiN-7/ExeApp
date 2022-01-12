@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BridgeActivity">
+
+    <TextView
+        android:id="@+id/bridge_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bridge Exercise"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rounds"
+        android:textSize="30sp"
+        android:layout_below="@+id/bridge_head"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bridge_rounds"/>
+
+    <EditText
+        android:id="@+id/bridge_round_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bridge_rounds"
+        android:layout_centerHorizontal="true"
+        android:ems="7"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="5" />
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_below="@id/bridge_round_input"
+        android:id="@+id/bridge_time_grid"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:id="@+id/bridge_seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/bridge_round_input"
+            android:text="Exercise"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/bridge_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bridge_round_input"
+            android:text="Rest"
+            android:gravity="center"
+            android:ems="4"
+            android:textSize="30sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:inputType="number"
+            android:gravity="center"
+            android:text="30"
+            android:id="@+id/bridge_seconds_input"
+            />
+
+        <EditText
+            android:id="@+id/bridge_rest_input"
+            android:layout_width="wrap_content"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:gravity="center"
+            android:text="3"
+            />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/bridge_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bridge_time_grid"
+        android:layout_centerHorizontal="true"
+        android:text="cal" />
+
+    <TextView
+        android:id="@+id/bridge_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bridge_cal"
+        android:layout_centerHorizontal="true"
+        android:text="03:00"
+        android:textSize="30sp" />
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bridge_progressbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@+id/bridge_time"
+        android:max="100"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:layout_below="@id/bridge_progressbar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/bridge_start"
+        />
+
+    <TextView
+        android:id="@+id/bridge_showTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bridge_start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-1dp"
+        android:text="00:00"
+        android:textSize="120sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/bridge_showTime"
+        android:layout_centerHorizontal="true"
+
+        >
+        <Button
+            android:id="@+id/bridge_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pause"
+            android:layout_marginRight="10dp"
+
+            />
+
+        <Button
+            android:id="@+id/bridge_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stop" />
+    </LinearLayout>
+
+
+</RelativeLayout>

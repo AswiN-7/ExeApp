@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/cc_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="Cat N Cow"
+        android:textSize="40sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rounds"
+        android:textSize="30sp"
+        android:layout_below="@+id/cc_head"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rounds"/>
+
+    <EditText
+        android:id="@+id/roundInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rounds"
+        android:layout_centerHorizontal="true"
+        android:ems="7"
+        android:inputType="number"
+        android:gravity="center"
+        android:text="5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seconds"
+        android:textSize="30sp"
+        android:layout_below="@+id/roundInput"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/seconds"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:gravity="center"
+        android:text="30"
+        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/seconds"
+        android:id="@+id/secondsInput"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/secondsInput"
+        android:id="@+id/totalTime"
+        android:text="5 min 00 sec"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/cc_cal_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/secondsInput"
+        android:layout_toRightOf="@+id/secondsInput"
+        android:text="calc" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:layout_below="@+id/totalTime"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/start"
+        />
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@+id/start"
+        android:max="100"
+        />
+
+    <TextView
+        android:id="@+id/ShowRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressbar"
+        android:text="1"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/showTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-1dp"
+        android:text="00:00"
+        android:textSize="120sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/showTime"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cc_ll"
+        >
+    <Button
+        android:id="@+id/cc_btn_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pause"
+        android:layout_marginRight="10dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cc_btn_stop"
+        android:text="Stop"
+        android:layout_below="@id/showTime"
+        android:layout_centerHorizontal="true"
+        />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cc_possible_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cc_ll"
+        android:layout_centerHorizontal="true"
+        android:text="Possible Exercises" />
+    <Button
+        android:id="@+id/cc_psible_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cc_possible_exercise"
+        android:layout_centerHorizontal="true"
+        android:text="Possible Exercises" />
+</RelativeLayout>
