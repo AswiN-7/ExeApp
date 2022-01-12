@@ -40,7 +40,6 @@ public class CatNcowActivity extends AppCompatActivity {
     int round = 1;
     boolean running = false;
     boolean musicFinished = false;
-    int Startflag = 0;
     int midStop = 0;
     boolean wrongInput = false;
     boolean pause = false;
