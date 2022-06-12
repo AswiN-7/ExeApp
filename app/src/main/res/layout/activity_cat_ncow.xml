@@ -30,8 +30,9 @@
         android:layout_below="@+id/rounds"
         android:layout_centerHorizontal="true"
         android:ems="7"
-        android:inputType="number"
         android:gravity="center"
+        android:inputType="number"
+        android:minHeight="48dp"
         android:text="5" />
 
     <TextView
@@ -43,17 +44,18 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/seconds"
         />
+
     <EditText
+        android:id="@+id/secondsInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/seconds"
+        android:layout_centerHorizontal="true"
         android:ems="7"
         android:gravity="center"
-        android:text="30"
         android:inputType="number"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/seconds"
-        android:id="@+id/secondsInput"
-        />
+        android:minHeight="48dp"
+        android:text="30" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

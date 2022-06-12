@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -15,14 +16,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         setContentView(R.layout.activity_main);
+        BridgeIv = findViewById(R.id.iv_bridge);
         CatCow = findViewById(R.id.btn_cat_n_cow);
         Meditate = findViewById(R.id.btn_meditate);
         Bridge = findViewById(R.id.btn_bridge);
 
         CatCowIv = findViewById(R.id.iv_cat_n_cow);
         MeditateIv = findViewById(R.id.iv_meditate);
-        BridgeIv = findViewById(R.id.iv_bridge);
 
 
         View.OnClickListener BridgeView = new View.OnClickListener() {

@@ -97,14 +97,14 @@
         android:layout_centerHorizontal="true"
         android:text="03:00"
         android:textSize="30sp" />
+
     <ProgressBar
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/bridge_progressbar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/bridge_time"
-        android:max="100"
-        />
+        android:max="100" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
