@@ -1,8 +1,10 @@
 package com.example.exerciseminiproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -11,7 +13,7 @@ import android.widget.ImageView;
 
 
 public class MainActivity extends AppCompatActivity {
-    private Button CatCow, Meditate, Bridge;
+    private Button CatCow, Meditate, Bridge, Mode;
     private ImageView CatCowIv, MeditateIv, BridgeIv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +26,26 @@ public class MainActivity extends AppCompatActivity {
         CatCow = findViewById(R.id.btn_cat_n_cow);
         Meditate = findViewById(R.id.btn_meditate);
         Bridge = findViewById(R.id.btn_bridge);
+        Mode = findViewById(R.id.btn_mode);
+
 
         CatCowIv = findViewById(R.id.iv_cat_n_cow);
         MeditateIv = findViewById(R.id.iv_meditate);
+        Mode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int nightModeFlags = getBaseContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+                switch (nightModeFlags) {
+                    case Configuration.UI_MODE_NIGHT_YES:
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                        break;
 
+                    case Configuration.UI_MODE_NIGHT_NO:
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                        break;
+                }
+            }
+        });
 
         View.OnClickListener BridgeView = new View.OnClickListener() {
             @Override
